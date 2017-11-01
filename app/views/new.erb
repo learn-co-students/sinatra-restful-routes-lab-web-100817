@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create A Recipe</title>
+  </head>
+  <body>
+    <form action="/recipes" method="post">
+      <label>Recipe name: <input type="text" name="recipe[name]"></label>
+      <label>Ingredient list: <input type="text" name="recipe[ingredients]"></label>
+      <label>Cooktime in mins: <input type="number" name="recipe[cook_time]"></label>
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </body>
+</html>
