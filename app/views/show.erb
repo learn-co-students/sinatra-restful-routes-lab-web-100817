@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My recipes</title>
+  </head>
+  <body>
+    <h1><%= @recipe.name %></h1><br>
+    <h2>Ingredients</h2>
+    <div style="border: solid">
+      <%= @recipe.ingredients %><br>
+    <% @recipe.ingredients.split(", ").each do |ingredient| %>
+    <h3><%=ingredient %></h3>
+    <% end %>
+    <h4>Cooking Time: <%= @recipe.cook_time %></h4>
+    </div>
+    <form class="" action="/recipes/<%= @recipe.id %>/delete" method="post">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete" id="delete">
+    </form>
+  </body>
+</html>
